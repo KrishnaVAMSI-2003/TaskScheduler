@@ -9,6 +9,7 @@ export default function Inbox(props) {
   const tododate = useRef()
   const {todoList, setTodoList,indexVal,setIndexVal} = props
   const [addTodo, setAddTodo] = useState(false)
+
   let date= new Date()
   let month = date.getMonth()+1
   let day = date.getDate()
@@ -36,7 +37,7 @@ export default function Inbox(props) {
     const obj = {
       index: indexVal+1,
       task: todotxt.current.value,
-      date:new Date(tododate.current.value).toLocaleDateString(),
+      date:new Date(tododate.current.value).toDateString(),
       checked:false
     }
     setTodoList([...todoList,obj])

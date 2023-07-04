@@ -6,7 +6,7 @@ export default function Today(props) {
   const {todoList, setTodoList} = props
   const [todayList, setTodayList] = useState(todoList)
   useEffect(()=>{
-    const date = new Date().toLocaleDateString()
+    const date = new Date().toDateString()
     setTodayList(todoList.filter((ele)=> ele.date===date))
   },[todoList])
 

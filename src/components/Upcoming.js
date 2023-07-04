@@ -9,12 +9,7 @@ export default function Upcoming(props) {
     const date = new Date()
     const num = 1000*24*60*60
     setUpcomingList(todoList.filter((ele)=>{
-      let eleDateArr=ele.date.split('/')
-      const day = eleDateArr[0]
-      eleDateArr[0] = eleDateArr[1]
-      eleDateArr[1]=day
-      const eleDate = eleDateArr.join('/')
-      return Math.ceil((new Date(eleDate)-date)/num) > 0
+      return Math.ceil((new Date(ele.date)-date)/num) > 0
     }))
   },[todoList])
 
