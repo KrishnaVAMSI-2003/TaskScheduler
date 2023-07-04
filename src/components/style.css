@@ -1,0 +1,191 @@
+.App{
+    height:100vh;
+    padding:1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: rgb(164, 213, 254);
+    background: linear-gradient(138deg, rgb(152, 209, 255) 0%, rgb(210, 179, 244) 52%, rgb(183, 251, 250) 100%);
+}
+.header{
+    height: fit-content;
+    text-align: center;
+    margin:0.5rem 0;
+    border-radius: 0.5rem;
+    background:rgba(233, 242, 204, 0.619);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px rgba(136, 78, 211, 0.336);
+    color:rgba(38, 38, 63, 0.89);
+    font-family: 'Proza Libre', sans-serif;
+}
+.header img{
+    width:3rem;
+    height:3rem;
+    border-radius: 0.3rem;
+}
+.header h2{
+    margin:0.8rem;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.container{
+    box-sizing: border-box;
+    padding: 0.7rem;
+    display : grid;
+    grid-template-columns: 2.5fr 5fr;
+    column-gap: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: rgba(220, 220, 220, 0.668);
+    
+}
+
+.sidebar{
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding:2rem 1.5rem;
+    background:rgba(233, 242, 204, 0.456);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.sidebar-items, .sidebar-text{
+    margin:1.5rem 1.5rem;
+    padding:1rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: 1000ms;
+    cursor: pointer;
+}
+.sidebar-text{
+    color: rgb(69, 55, 33);
+    padding:0.8rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0rem 1.5rem 2rem 1.5rem;
+    box-shadow: 0 0 10px rgb(126, 126, 126);
+    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background:rgba(233, 242, 204, 0.347);
+    cursor: none;
+}
+.sidebar-container{
+    color: rgb(48, 40, 29);
+    box-sizing: inherit;
+    height:26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:3rem 0;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    
+    
+}
+.sidebar-items:hover{
+    margin:1.5rem 0.7rem;
+    padding:1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    transform: translateY(-0.5rem);
+    transition: 400ms;
+    
+}
+
+
+.inbox, .today, .next7days{
+    color: rgb(37, 33, 29);
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background:rgba(233, 242, 204, 0.456);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.todo-input-container{
+    text-align: center;
+    padding:0.8rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    background:rgba(233, 242, 204, 0.344);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.add-btn,.cancel-btn{
+    color: rgb(37, 33, 29);
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding:0.4rem 1rem;
+    margin:1rem;
+    border-radius: 0.55rem;
+    background:transparent;
+    border:0.5px solid rgb(130, 154, 165);
+    cursor: pointer;
+    box-shadow: 0 0 9px rgba(0,0,0,0.2);
+    
+}
+.todo-inp-text, .todo-inp-date{
+    box-sizing: border-box;
+    width:70%;
+    color: rgb(37, 33, 29);
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 13px;
+    padding:0.4rem;
+    margin:0.5rem 0.5rem 0.5rem;
+    border-radius: 0.4rem;
+    border:1px solid rgb(136, 149, 155);
+    background: transparent;
+    box-shadow: 0 0 9px rgba(0,0,0,0.2);
+}
+
+.todo-inp-date{
+    width:30%;
+}
+
+.list-view ul{
+    list-style-type: none;
+}
+
+.list-view{
+    box-sizing: border-box;
+    width:100%;
+    border-radius: 0.5rem;
+    height: 420px;
+    padding: 1.5rem;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background:rgba(233, 242, 204, 0.344);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.remove-btn{
+    border-radius: 100%;
+    padding: 0.1rem 0.4rem;
+    margin:0 0 0 1rem;
+    border: none;
+    color: none;
+    background-color: rgba(252, 0, 0, 0.166);
+}
+.remove-btn:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.task-in-list{
+    margin: 0.5rem 2rem;
+}
